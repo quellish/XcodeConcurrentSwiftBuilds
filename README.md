@@ -4,7 +4,7 @@ In Xcode 9.2 Apple has introduced another new and experimental feature to accele
 
 Quit Xcode and in a Terminal window enter:
 
-`defaults write com.apple.dt.Xcode BuildSystemScheduleInherentlyParallelCommandsExclusively -bool YES`
+`defaults write com.apple.dt.Xcode BuildSystemScheduleInherentlyParallelCommandsExclusively -bool NO`
 
 That will enable experimental concurrent Swift build tasks feature. Relaunch Xcode and build your project. Some projects will see a noticeable difference, but many will not. In informal testing I have seen improvements of up to ~40%. Xcode will use more memory with this feature enabled. If a lack of RAM is slowing down your builds this will not help!
 
@@ -13,3 +13,5 @@ To disable it enter another Terminal command:
 `defaults delete com.apple.dt.Xcode BuildSystemScheduleInherentlyParallelCommandsExclusively`
 
 Quit and relaunch Xcode and the feature will be disabled again.
+
+Originally published on [LinkedIn Pulse](https://www.linkedin.com/pulse/even-faster-swift-build-times-xcode-92-dan-zinngrabe/)
